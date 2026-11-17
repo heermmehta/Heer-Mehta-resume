@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heer Mehul Mehta</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  
+  <!-- Editorial Typography: Playfair Display, Newsreader, Plus Jakarta Sans, Karla -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300..800;1,300..800&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FINANCE & TAX BACKGROUND DESIGN & HIGH-FREQUENCY ANIMATION (Requirement 3: Increased Frequency) -->
+  <div class="finance-bg-canvas" aria-hidden="true">
+    <!-- Smooth Undulating Financial Trendline Curve -->
+    <svg class="trendline-svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path class="trendline-path" d="M0,160 C320,80 480,260 720,180 C960,100 1120,240 1440,140 C1760,40 1920,220 2160,160 C2400,100 2640,240 2880,150" />
+      <path class="trendline-path-solid" d="M0,190 C360,130 520,280 760,210 C1000,140 1180,270 1440,180 C1700,90 1960,250 2200,190 C2440,130 2680,270 2880,190" />
+    </svg>
+
+    <!-- Drifting Minimalist Financial & Tax Symbols (High-Frequency Stream) -->
+    <div class="floating-symbol sym-1">₹</div>
+    <div class="floating-symbol sym-2">§</div>
+    <div class="floating-symbol sym-3">∑</div>
+    <div class="floating-symbol sym-4">%</div>
+    <div class="floating-symbol sym-5">∆</div>
+    <div class="floating-symbol sym-6">Dr.</div>
+    <div class="floating-symbol sym-7">Cr.</div>
+    <div class="floating-symbol sym-8">₹</div>
+    <div class="floating-symbol sym-9">Tax</div>
+    <div class="floating-symbol sym-10">NAV</div>
+    <div class="floating-symbol sym-11">ROI</div>
+    <div class="floating-symbol sym-12">WACC</div>
+    <div class="floating-symbol sym-13">%</div>
+    <div class="floating-symbol sym-14">§</div>
+    <div class="floating-symbol sym-15">∑</div>
+    <div class="floating-symbol sym-16">₹</div>
+  </div>
+
+  <!-- Darker Tinted Cursor Spotlight Effect -->
+  <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>
+
+  <!-- TOP RIGHT THEME SWITCHER (Slidable Dot with Sun & Moon) -->
+  <aside class="theme-switch-wrapper" aria-label="Theme Switcher">
+    <!-- Sun Icon (Light Mode) -->
+    <span class="theme-icon sun-icon" title="Light Mode">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+      </svg>
+    </span>
+
+    <!-- Slidable Dot Toggle Button -->
+    <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle between Light and Dark mode">
+      <span class="theme-toggle-dot"></span>
+    </button>
+
+    <!-- Moon Icon (Dark Mode) -->
+    <span class="theme-icon moon-icon" title="Dark Mode">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+      </svg>
+    </span>
+  </aside>
+
+  <!-- HERO SECTION (2-Column Grid: Left Content, Right Profile Photo) -->
+  <header id="hero" class="hero-section">
+    <div class="hero-grid">
+      
+      <!-- Left Column: Name & Details -->
+      <div class="hero-left-col">
+        <!-- Requirement 5: Beside Dual degree undergraduate, write "CA Aspirant" instead of "CA Intermediate" -->
+        <div class="hero-status-pill">
+          <span class="status-dot"></span>
+          <span>Dual Degree Undergraduate &bull; CA Aspirant</span>
+        </div>
+
+        <!-- Name in Normal Sentence/Title format with larger, distinguished editorial typography -->
+        <h1 class="hero-name">Heer Mehul Mehta</h1>
+
+        <!-- Professional Tagline -->
+        <p class="hero-tagline">
+          CA Intermediate candidate and dual-degree undergraduate at MSU Baroda and IIM Bangalore pursuing corporate finance, tax analysis, and auditing, backed by top academic and athletic achievements and proven project execution.
+        </p>
+
+        <!-- Rotating Specializations (Changes every 2s continuously) -->
+        <div class="specializing-container">
+          <span class="specializing-label">Specializing in</span>
+          <span class="specializing-text" id="specializingRotating">Corporate Finance &amp; Valuation</span>
+        </div>
+
+        <!-- Clickable Action Buttons (Requirement 4: Email autofills heermmehta17@gmail.com) -->
+        <div class="hero-cta">
+          <a href="mailto:heermmehta17@gmail.com" class="btn-pill email-btn">
+            <img src="gmail.png" alt="Email" class="btn-icon">
+            <span>Email</span>
+          </a>
+          <a href="https://www.linkedin.com/in/heer-mehta-b25386305/" target="_blank" rel="noopener noreferrer" class="btn-pill linkedin-btn">
+            <img src="linkedin.png" alt="LinkedIn" class="btn-icon">
+            <span>LinkedIn</span>
+          </a>
+          <a href="Heer Mehta.pdf" download="Heer Mehta.pdf" class="btn-pill cv-btn">
+            <span>Download CV</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Requirement 1: Rectangular Profile Photo with border, increased by 2cm on all sides -->
+      <div class="hero-right-col">
+        <div class="hero-profile-frame">
+          <img src="profile.jpg" alt="Heer Mehul Mehta Profile Photo" class="hero-profile-img" onerror="this.onerror=null; this.src='profile.jpeg';">
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Requirement 6 & 12 & 14: STICKY NAVIGATION BAR (Shifted upwards by 1cm -> 1cm Away from Top, Rounded Corners) -->
+  <div class="sticky-nav-wrapper">
+    <nav class="sticky-nav" id="stickyNavbar">
+      <span class="nav-brand">HEER</span>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="main-content">
+
+    <!-- 1. About Me Section -->
+    <section id="about" class="content-section">
+      <h2 class="section-heading">About Me</h2>
+      <div class="about-card">
+        <strong class="about-lead">Learning. Leading. Levelling up.</strong>
+        <p class="about-text">
+          Interested in accounting, mathematics and finance along with becoming more consistent in everything I do. From leading teams to competing on the field to preparing for a career in finance, I thrive in environments that demand more. Average isn’t my baseline.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Education & Academic Ranks Section (Interactive List with Collins-style Dimming) -->
+    <section id="education" class="content-section">
+      <h2 class="section-heading">Education & Academic Ranks</h2>
+      <ul class="interactive-list">
+        
+        <!-- CA Intermediate -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">Chartered Accountancy (CA Intermediate)</h3>
+            <span class="card-subtitle">ICAI | 2026 – 2027</span>
+          </div>
+          <p class="card-desc">
+            Cleared CA Foundation with Distinction (314/400, <strong>Vadodara District Rank 1</strong>, May 2026); appearing for CA Intermediate exam in May 2027.
+          </p>
+        </li>
+
+        <!-- IIM Bangalore BBA -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">Bachelor of Business Administration (Digital Business & Entrepreneurship)</h3>
+            <span class="card-subtitle">IIM Bangalore | 2026 – Present</span>
+          </div>
+          <p class="card-desc">
+            First-year undergraduate program focusing on digital business strategy and venture execution.
+          </p>
+        </li>
+
+        <!-- MSU Baroda B.Com -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">Bachelor of Commerce (Honours)</h3>
+            <span class="card-subtitle">MSU Baroda | 2026 – Present</span>
+          </div>
+          <p class="card-desc">
+            First-year coursework covering financial accounting, business law, and commercial principles.
+          </p>
+        </li>
+
+        <!-- Class 12 -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">Class 12 (ISC Board)</h3>
+            <span class="card-subtitle">Nalanda International School</span>
+          </div>
+          <p class="card-desc">
+            <strong>98.25% — Vadodara City Topper</strong>. Top rank in commercial studies and mathematics.
+          </p>
+        </li>
+
+        <!-- Class 10 -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">Class 10 (ICSE Board)</h3>
+            <span class="card-subtitle">North Point School</span>
+          </div>
+          <p class="card-desc">
+            <strong>98.60% — Maharashtra State Topper</strong>. State-wide academic distinction establishing rigorous analytical mastery.
+          </p>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- 3. Experience & Projects Section -->
+    <section id="experience" class="content-section">
+      <h2 class="section-heading">Experience & Projects</h2>
+      <ul class="interactive-list">
+
+        <!-- Vanyug Project (Requirement 2: Just write "Download Pitch Deck") -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">Financial Strategist & Co-Founder — Vanyug</h3>
+            <span class="card-subtitle">Shark Tank Competition Project</span>
+          </div>
+          <ul class="card-sublist">
+            <li>Formulated pricing, cost structures, and sales forecasts for eco-friendly school gardening kits (Rs. 87.79 unit cost, Rs. 115 selling price, 23.7% profit margin, 10,500 annual projection).</li>
+            <li>Secured 1st place among 12 teams in school round and Honourable Mention among 20 teams at the state level.</li>
+          </ul>
+          <div class="card-actions">
+            <a href="vanyug.html" class="btn-action-primary">
+              <span>Learn More</span> &rarr;
+            </a>
+            <!-- Requirement 2: Just write "Download Pitch Deck", dont write (nalanda.....) -->
+            <a href="Nalanda International School.pdf" download="Nalanda International School.pdf" class="btn-action-secondary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download Pitch Deck</span>
+            </a>
+          </div>
+        </li>
+
+        <!-- ICAI Nakshatra Volunteering -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">Event & Crowd Management Volunteer — ICAI Nakshatra</h3>
+            <span class="card-subtitle">National CA Students Conference</span>
+          </div>
+          <ul class="card-sublist">
+            <li>Managed front-desk, attendee guidance, and stage-to-backstage coordination for a 2-day conference of ~1,200 CA students under an 8-day prep window.</li>
+            <li>Maintained seamless audience flow and assisted in realigning speaker schedules when keynote technical sessions ran overtime.</li>
+          </ul>
+          <div class="card-actions">
+            <a href="nakshatra.html" class="btn-action-primary">
+              <span>Learn More</span> &rarr;
+            </a>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- 4. Achievements & Leadership Section -->
+    <section id="achievements" class="content-section">
+      <h2 class="section-heading">Achievements & Leadership</h2>
+      <ul class="interactive-list">
+
+        <!-- Requirement 7: National Volleyball Player and State Team Captain -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">National Volleyball Player and State Team Captain</h3>
+            <span class="card-subtitle">2025</span>
+          </div>
+          <p class="card-desc">
+            Captain of Gujarat state volleyball team; represented Maharashtra at National level and CISCE in SGFI; led school team to 1st place in regional/state tournaments.
+          </p>
+          <div class="card-actions">
+            <a href="achievement1.html" class="btn-action-primary">
+              <span>Learn More</span> &rarr;
+            </a>
+          </div>
+        </li>
+
+        <!-- Student Council Leader -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">Student Council Leader & Draco House Vice Captain</h3>
+            <span class="card-subtitle">School Leadership</span>
+          </div>
+          <p class="card-desc">
+            Head of student body (2024–25) coordinating Sports Day and Symphony concert; elected House Vice Captain (2022–23) after a month-long campaign.
+          </p>
+          <div class="card-actions">
+            <a href="achievement2.html" class="btn-action-primary">
+              <span>Learn More</span> &rarr;
+            </a>
+          </div>
+        </li>
+
+        <!-- Public Speaking & Community Service -->
+        <li>
+          <div class="card-header">
+            <h3 class="card-title">Public Speaking & Community Service</h3>
+            <span class="card-subtitle">Extracurricular Distinction</span>
+          </div>
+          <p class="card-desc">
+            Secured 1st place among 82,000 participants in Maharashtra Police Vyaktrutva Spardha speech competition; acted as board exam scribe for a differently-abled student and volunteered for a month at an NGO for blind/deaf students (learning Indian Sign Language).
+          </p>
+          <div class="card-actions">
+            <a href="achievement3.html" class="btn-action-primary">
+              <span>Learn More</span> &rarr;
+            </a>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- 5. Testimonials Section (Cuberto Clustered Stack -> Horizontal Row on Hover) -->
+    <section id="testimonials" class="content-section">
+      <h2 class="section-heading">Testimonials</h2>
+      <div class="testimonials-wrapper">
+        <div class="testimonials-cluster" title="Hover or tap to align quotes">
+          
+          <!-- Testimonial 1: Teammate -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Heer's financial modeling and pricing precision for Vanyug were truly exceptional. She backed our pitch with solid numbers, giving us the confidence to win 1st place and close a live sale with a judge."
+            </p>
+            <div>
+              <span class="testimonial-author">Vanyug Co-Founder & Teammate</span>
+              <span class="testimonial-role">Shark Tank Pitch Collaboration</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 2: ICAI Coordinator -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Managing 1,200 delegates at Nakshatra under an 8-day turnaround was intense. Heer's operational grit, front-desk command, and crisis handling when sessions ran overtime made a critical difference."
+            </p>
+            <div>
+              <span class="testimonial-author">ICAI Conference Coordinator</span>
+              <span class="testimonial-role">Nakshatra National CA Conference</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 3: MSU Faculty Mentor -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "An extraordinary student who blends top-tier academic rigor in CA Foundation with state-level athletic discipline and entrepreneurial execution. Average truly isn’t her baseline."
+            </p>
+            <div>
+              <span class="testimonial-author">Faculty Mentor</span>
+              <span class="testimonial-role">MSU Baroda</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Requirement 9: Under testimonials section before contact section, write "References on Request" -->
+        <div class="references-note-wrap">
+          <span class="references-note">References on Request</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contact Section (Requirement 4: Email autofills heermmehta17@gmail.com) -->
+    <section id="contact" class="content-section">
+      <div class="contact-card">
+        <h2 class="contact-title">Let's Connect</h2>
+        <p class="contact-text">
+          Reach out for corporate finance, tax analysis, and auditing opportunities, or strategic project collaborations.
+        </p>
+        <div class="hero-cta" style="justify-content: center;">
+          <a href="mailto:heermmehta17@gmail.com" class="btn-pill email-btn">
+            <img src="gmail.png" alt="Email" class="btn-icon">
+            <span>Email</span>
+          </a>
+          <a href="https://www.linkedin.com/in/heer-mehta-b25386305/" target="_blank" rel="noopener noreferrer" class="btn-pill linkedin-btn">
+            <img src="linkedin.png" alt="LinkedIn" class="btn-icon">
+            <span>LinkedIn</span>
+          </a>
+          <a href="Heer Mehta.pdf" download="Heer Mehta.pdf" class="btn-pill cv-btn">
+            <span>Download CV</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER SECTION (Requirement 8: Tagline font size increased by 7 pts to 20pt) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Exact line in Times New Roman, increased by 7 pts (20pt) -->
+      <p class="footer-quote-tnr">
+        Driven by curiosity. Inspired by numbers. Determined to make a difference.
+      </p>
+
+      <!-- 4 Equidistant Small Info Columns (Headings lighter shade than content) -->
+      <div class="footer-grid-4">
+        
+        <!-- Column 1: Copyright -->
+        <div class="footer-col">
+          <span class="footer-col-heading">Copyright</span>
+          <span class="footer-col-content">All rights reserved. &copy; 2026</span>
+        </div>
+
+        <!-- Column 2: Quick Travel -->
+        <div class="footer-col">
+          <span class="footer-col-heading">Quick travel</span>
+          <span class="footer-col-content">
+            <a href="#hero" class="footer-top-link">
+              <span>Back to the top</span> &uarr;
+            </a>
+          </span>
+        </div>
+
+        <!-- Column 3: Location -->
+        <div class="footer-col">
+          <span class="footer-col-heading">Location</span>
+          <span class="footer-col-content">Gujarat, India</span>
+        </div>
+
+        <!-- Column 4: Design and Code by -->
+        <div class="footer-col">
+          <span class="footer-col-heading">Design and Code by</span>
+          <span class="footer-col-content">Heer Mehta</span>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
